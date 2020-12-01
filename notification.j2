@@ -1,0 +1,38 @@
+<style type="text/css">
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTa-j2U0lmluP9RWlSytm3ho.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+.body {
+    width: 90%;
+    margin: auto;
+    font-family: 'Open Sans', 'Helvetica', sans-serif; 
+    font-size: 14pt;
+    color: #075D72;
+}
+.signature { 
+    font-family: 'Century Gothic', 'Geneva', 'Arial';
+    font-size: 11pt;
+    color:#909393;
+}
+.event { border-style: solid; border-width: 5px;}
+a:link { color: #B40057; text-decoration: underline}
+a:visited { color: #542A95; text-decoration: none}
+a:hover { color: #B40057; background-color:#C4FFF9; text-decoration: underline }
+</style>
+
+<div class="body">
+<b>iDRAC Alert</b>
+<p>
+{% for event in vars %}
+<b>Time of event (local timezone): </b> {{ event }}<br>
+<b>Severity:</b> {{ vars[event]['severity'] }}<br>
+<b>Message:</b> {{ vars[event]['message'] }}<br>
+<hr>
+{% endfor %}
+<br>
+</div>
+

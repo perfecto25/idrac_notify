@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "*"
+dictor = "*"
+arrow = "*"
+PyYAML = "*"
+Jinja2 = "*"
+
+[requires]
+python_version = "3.6"
+
+[scripts]
+idrac_notify = "python get_idrac_logs.py"

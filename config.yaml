@@ -1,0 +1,26 @@
+---
+# iDRAC MONITORING CONFIGURATION
+
+# number of hours between iDrac checks
+check_cycle: 6
+
+# Emails
+smtp_host: localhost
+notif_emails:
+  - my_email@company.com
+
+from_addr: idrac@company.com
+
+# Timezone from where this script will run
+local_tz: America/New_York
+
+user: readonly
+password: read123
+
+# iDRAC IPs
+hosts:
+    nyweb1: 192.168.100.1
+    nyweb2: 192.168.100.2
+    txdb1: 192.168.100.3
+    txapp1: 192.168.100.4
+    txapp2: 192.168.100.5
